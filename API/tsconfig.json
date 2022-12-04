@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",                            
+    "module": "commonjs",                       
+    "allowJs": true,                         
+    "outDir": "build",                          
+    "rootDir": "./src",                         
+    "strict": true,
+    "baseUrl": ".",                         
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@constrollers/*": ["./src/controllers/*"],
+      "@config/*": ["./src/confing/*"],
+    },                             
+    "typeRoots": ["./node_modules/@types", "./src/@types"],                         
+    "esModuleInterop": true,
+    "skipLibCheck": true,                       
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
