@@ -10,8 +10,9 @@
     "paths": {
       "@src/*": ["./src/*"],
       "@routes/*": ["./src/routes/*"],
-      "@constrollers/*": ["./src/controllers/*"],
-      "@config/*": ["./src/confing/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@config/*": ["./src/config/*"],
     },                             
     "typeRoots": ["./node_modules/@types", "./src/@types"],                         
     "esModuleInterop": true,
