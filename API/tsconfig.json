@@ -13,6 +13,9 @@
       "@interfaces/*": ["./src/interfaces/*"],
       "@controllers/*": ["./src/controllers/*"],
       "@config/*": ["./src/config/*"],
+      "@models/*": ["./src/models/*"],
+      "@utils/*": ["./src/utils/*"],
+
     },                             
     "typeRoots": ["./node_modules/@types", "./src/@types"],                         
     "esModuleInterop": true,

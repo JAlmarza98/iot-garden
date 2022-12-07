@@ -1,8 +1,9 @@
-import { getClimateData } from "@controllers/climate.controller";
+import { getClimateData, saveClimateData } from "@controllers/climate.controller";
 import { Router } from "express";
 
 const router = Router();
 
-router.get("/", getClimateData);
+router.post("/", getClimateData);
+router.post("/save", saveClimateData);
 
 export default router;
