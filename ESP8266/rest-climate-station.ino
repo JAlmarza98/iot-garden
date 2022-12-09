@@ -39,6 +39,12 @@ const char *password = "HSbp6hY5Gt";
 // Create server instance
 WiFiServer server(LISTEN_PORT);
 
+// Set static IP address
+IPAddress local_IP(192, 168, 1, 184);
+// Set gateway IP address
+IPAddress gateway(192, 168, 1, 1);
+IPAddress subnet(255, 255, 0, 0);
+
 // API Variables
 float mq, humidity, temperature;
 
@@ -55,6 +61,12 @@ void setup()
   // Name ID
   rest.set_id("1");
   rest.set_name("nodemcu_climate_station");
+
+  // Configures static IP address
+  if (!WiFi.config(local_IP, gateway, subnet))
+  {
+    Serial.println("STA Failed to configure");
+  }
 
   // Connect WiFi
   WiFi.begin(ssid, password);
