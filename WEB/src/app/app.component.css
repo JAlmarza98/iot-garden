@@ -1,0 +1,37 @@
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #641985;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.content {
+    /* height: calc(100vh - 98px); */
+
+    border-radius: 10px;
+    margin: 16px;
+    background-color: #424242;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+.menu-button mat-icon {
+    margin-right: 8px;
+}

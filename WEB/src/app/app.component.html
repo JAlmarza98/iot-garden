@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" #toolbar>
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  IOT Garden
+</mat-toolbar>
+<mat-sidenav-container
+  [ngStyle]="{ height: 'calc(100vh - ' + toolbarHeight + 'px)' }"
+>
+  <mat-sidenav color="primary" #sidenav="matSidenav" class="mat-elevation-z8">
+    <button
+      *ngFor="let option of menuOptions"
+      mat-button
+      class="menu-button"
+      [routerLink]="option.route"
+    >
+      <mat-icon>{{ option.icon }}</mat-icon>
+      <span>{{ option.label }}</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div
+      class="content mat-elevation-z8"
+      #sidenavContent
+      [ngStyle]="{ height: 'calc(100vh - ' + contentHeight + 'px)' }"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
